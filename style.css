@@ -1,0 +1,136 @@
+:root {
+    --primary-color: #288DA8;
+    --primary-hover: #1e6b80;
+    --light-bg: #E9F4F6;
+    --font-family: 'Oxygen', sans-serif;
+}
+
+body {
+    font-family: var(--font-family);
+    color: #333;
+    /* Adjust scroll padding so navbar doesn't cover content */
+    scroll-padding-top: 80px; 
+}
+
+/* Custom Color Classes */
+.text-primary-custom {
+    color: var(--primary-color) !important;
+}
+
+.bg-primary-custom {
+    background-color: var(--primary-color) !important;
+}
+
+.bg-light-custom {
+    background-color: var(--light-bg) !important;
+}
+
+/* Custom Buttons */
+.btn-primary-custom {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+.btn-primary-custom:hover {
+    background-color: var(--primary-hover);
+    border-color: var(--primary-hover);
+    color: #fff;
+}
+
+.btn-outline-custom {
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+    background-color: transparent;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-custom:hover {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+/* Hero Section */
+.hero-section {
+    background-color: var(--light-bg);
+    padding: 120px 0 80px; /* Top padding for fixed navbar */
+    min-height: 80vh;
+}
+
+.section-padding {
+    padding: 80px 0;
+}
+
+.divider {
+    height: 3px;
+    width: 60px;
+    background-color: var(--primary-color);
+    margin-top: 10px;
+}
+
+/* Services */
+.service-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+}
+
+.icon-box i {
+    color: var(--primary-color);
+}
+
+/* Brand Slider (Horizontal Scroller) */
+.brand-slider-container {
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+}
+
+.brand-slider-track {
+    display: inline-block;
+    animation: slide 20s linear infinite;
+}
+
+.brand-item {
+    display: inline-block;
+    padding: 10px 30px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #6c757d;
+    opacity: 0.7;
+}
+
+@keyframes slide {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); } /* Assumes content is duplicated */
+}
+
+/* Map Section */
+.map-section {
+    line-height: 0;
+}
+
+/* Mobile Fixes */
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 100px 0 50px;
+        text-align: center;
+    }
+}
+
+/* ======= Service card ====== */
+.service-card{
+    border-color: var(--primary-color);
+}
+
+@media only screen and (max-width: 768px){
+    html,
+    body{
+    width:100%;
+    overflow-x: hidden;
+    }
+}
